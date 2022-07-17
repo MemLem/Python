@@ -82,4 +82,21 @@ muestra un mensaje de error. El programa termina cuando el usuario introduce un
 cero.
 
 
+    meses = ("enero", "eebrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
+    "noviembre", "dicimbre")
+
+    n_mes = int(input('Ingresa un número entre 1 y 12: '))
+
+    while n_mes != 0:
+        if n_mes >= 1 and n_mes <= len(meses):
+            print(meses[n_mes - 1])
+            n_mes = int(input('Ingresa un número: '))
+        else:
+            print('Introduce un valor entre 1 y 12')
+            n_mes = int(input('Ingresa un número: '))
+    else:
+        print('fin')
+
+
+
 # TRATA DE RESOLVER Y AVANZAR LO MÁS POSIBLE EN LOS EJERICICIOS, EL MARTES HABILITO "AYUDAS" EN CADA EJERCICIO
