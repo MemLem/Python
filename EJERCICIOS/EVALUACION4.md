@@ -56,10 +56,10 @@ la nota media, la nota más alta que ha sacado y la menor.
     min_nota = min(notas)
 
 
-print(f'''Las notas del alumnos son: {notas}
-      Promedio de {promedio}
-      Su nota más alta es: {max_nota}
-      Su nota más baja es: {min_nota}''')
+    print(f'''Las notas del alumnos son: {notas}
+          Promedio de {promedio}
+          Su nota más alta es: {max_nota}
+          Su nota más baja es: {min_nota}''')
 
 ### 4.4 Ejercicio 4 (1.2 puntos)
 Codifica un programa en python que nos permita guardar los nombres de los
