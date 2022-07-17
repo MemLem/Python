@@ -21,6 +21,16 @@ Crea una lista e inicializarla con 5 cadenas de caracteres leídas por teclado. 
 los elementos de la lista en otra lista pero en orden inverso, y muestra sus
 elementos por la pantalla.
 
+    lista_nombres = []
+    lista_nombres_inv = [] 
+
+    for indice in range(1,6):
+      lista_nombres.append(input("Ingresa un nombre: "))
+
+    lista_nombres_inv = lista_nombres[::-1]
+
+    for nombre in lista_nombres_inv:
+      print(nombre)
 
 ### 4.3 Ejercicio 3 (1.2 puntos)
 Se quiere realizar un programa que lea por teclado las 5 notas obtenidas por un
