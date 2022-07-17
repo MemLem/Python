@@ -6,6 +6,16 @@ y posteriormente muestre en pantalla cada elemento de la lista junto con su
 cuadrado y su cubo.
 Respuesta:
 
+    import random
+
+    lista = []
+
+    for indice in range(1,11):
+      lista.append(random.randint(1,10))
+
+    for numero in lista:
+      print(numero," ",numero ** 2," ",numero ** 3)
+
 ### 4.2 Ejercicio 2 (1.2 puntos)
 Crea una lista e inicializarla con 5 cadenas de caracteres leídas por teclado. Copia
 los elementos de la lista en otra lista pero en orden inverso, y muestra sus
