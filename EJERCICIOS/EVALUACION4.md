@@ -37,6 +37,30 @@ Se quiere realizar un programa que lea por teclado las 5 notas obtenidas por un
 alumno (comprendidas entre 0 y 10). A continuación debe mostrar todas las notas,
 la nota media, la nota más alta que ha sacado y la menor.
 
+    notas = []
+    contador = 1
+
+    while contador < 6:
+        nota =(int(input('Ingresa una calificación: ')))
+        if nota >= 0 and nota <= 10:
+            notas.append(nota)
+            contador = contador + 1
+        else:
+            print('Ingresa una nota entre 0 y 10')
+
+
+    promedio = sum(notas) / len(notas)
+
+    max_nota = max(notas)
+
+    min_nota = min(notas)
+
+
+print(f'''Las notas del alumnos son: {notas}
+      Promedio de {promedio}
+      Su nota más alta es: {max_nota}
+      Su nota más baja es: {min_nota}''')
+
 ### 4.4 Ejercicio 4 (1.2 puntos)
 Codifica un programa en python que nos permita guardar los nombres de los
 alumnos de una clase y las notas que han obtenido. Cada alumno puede tener
