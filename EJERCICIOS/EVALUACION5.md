@@ -23,3 +23,16 @@ Programa que imprima si el número ingresado esta en el rango de 1 a 7, el núme
 
 ### 5.3 Ejercicio 3 (2 puntos)
 Programa que solicite un monto y que solicite el interés mensual, si el interés es mayor al 30% nos imprimirá que es incorrecto, si es menor realizará el cálculo e imprimira el monto con su interés adicionado.
+
+    monto = int(input('Ingresa un monto: '))
+
+    interes_mensual = float(input('Ingresa un interes mensual menor al 30%: '))
+
+    if interes_mensual > 30:
+        print('El interes ingresado es incorrecto')
+    else:
+        total = monto + (monto * (interes_mensual / 100))
+        print(f'''
+        Por un monto de ${monto} 
+        Con una tasa de interes mensual del {interes_mensual}% 
+        El total a pagar es de ${total}''')
