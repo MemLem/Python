@@ -2,6 +2,15 @@
 ### 5.1 Ejercicio 1 (2 puntos)
 Programa que imprima si el número es positivo o negativo, el número debe ser ingresado por consola.
 
+    numero = int(input('Ingresa un número positivo o negativo: '))
+
+    if numero == 0:
+        print('El número es neutro')
+    elif numero > 0:
+        print('El número ingresado es positivo')
+    else:
+        print('El número ingresado es negativo')
+
 ### 5.2 Ejercicio 2 (2 puntos)
 Programa que imprima si el número ingresado esta en el rango de 1 a 7, el número se solicita por consola.
 
