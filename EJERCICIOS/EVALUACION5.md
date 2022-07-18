@@ -14,5 +14,12 @@ Programa que imprima si el número es positivo o negativo, el número debe ser i
 ### 5.2 Ejercicio 2 (2 puntos)
 Programa que imprima si el número ingresado esta en el rango de 1 a 7, el número se solicita por consola.
 
+    numero = int(input('Ingresa un número: '))
+
+    if numero >= 1 and numero <= 7:
+        print('El número ingresado está en el rando de 1 a 7')
+    else:
+        print('El número ingresado está fuera del rando de 1 a 7')
+
 ### 5.3 Ejercicio 3 (2 puntos)
 Programa que solicite un monto y que solicite el interés mensual, si el interés es mayor al 30% nos imprimirá que es incorrecto, si es menor realizará el cálculo e imprimira el monto con su interés adicionado.
