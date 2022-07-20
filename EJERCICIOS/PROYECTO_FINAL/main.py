@@ -25,14 +25,14 @@ def ahorcado(): # Se crea una nueva función, llamada "ahorcado"
     print("=======================================") # Instrucción que imprimirá en consola la cadena: =======================================
 
     palabra = obtener_palabra_válida(palabras) # variable que almacena la cadena/palabra seleccionada anteriormente desde la función "obtener_palabra_válida"
-    letras_por_adivinar = set(palabra)  
-    abecedario = set(string.ascii_uppercase) 
-    letras_adivinadas = set()  
+    letras_por_adivinar = set(palabra) # variable que almacenará una por una las letras unicas que contenga la palabra seleccionada aleatoriamente. Con la función set() se eliminan letras repetidas, es decir, contempla un conjunto de elementos unicos.
+    abecedario = set(string.ascii_uppercase) # variable que contendrá el conjunto total de letras del abecedario en mayusculas. El método "ascii_uppercase" es usado para los caracteres considerados como mayuculas, pero cuyo valor NO depende de la zona regional que tiene configurado el sistema.
+    letras_adivinadas = set() # variable que almacenará un conjunto de elementos/letras sin repetirse.
 
     vidas = 7 # Variable nombrada "vidas" de tipo numerica, la cual indicará el número de oportunidades a jugar.
 
 
-    while len(letras_por_adivinar) > 0 and vidas > 0:
+    while len(letras_por_adivinar) > 0 and vidas > 0: # ciclo que se repetira n veces, siempre y cuando la longitud de la palabra seleccionada sea mayor que 0 elementos Y vidas sea mayor a cero, es decir, cuando el jugador tenga cero letras por adivinar y cero vidas se detendra el programa.
 
         print(f"Te quedan {vidas} vidas y has usado estas letras: {' '.join(letras_adivinadas)}")
 
