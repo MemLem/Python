@@ -12,8 +12,8 @@ def obtener_palabra_válida(palabras): # Creación de la función llamada "obten
     palabra = random.choice(palabras) # El argumento "palabra" almacena un elemento seleccionado aleatoriamente desde la lista "palabras" (la cual fue importada con anterioridad). El método .choice() es parte del modulo "random", el cual también fue importado lineas arriba.
 
 
-    while '-' in palabra or ' ' in palabra: 
-        palabra = random.choice(palabras) # En caso de cumplir las condiciones del while anterior, esta variable almacenará un elemento seleccionado aleatoriamente desde la lista "palabras" (la cual fue importada con anterioridad)
+    while '-' in palabra or ' ' in palabra: # Intrucción que inicia un bucle de n veces. Siempre y cuando, la cadena de tetxo seleccionada desde la lista "palabras" contenga un guión "-" O un espacio en blanco " ". En caso de cumplir una u otra condición se realizará la instrucción siguiente.
+        palabra = random.choice(palabras) # En caso de cumplir las condiciones del while anterior, esta variable volverá a almacenar un elemento aleatorio desde la lista "palabras" (la cual fue importada con anterioridad)
 
     return palabra.upper() # Instrucción que devuelve la palabra selecionada, pero en mayúsculas.
 
