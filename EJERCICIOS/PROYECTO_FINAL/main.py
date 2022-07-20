@@ -18,18 +18,18 @@ def obtener_palabra_válida(palabras): # Creación de la función llamada "obten
     return palabra.upper() # Instrucción que devuelve la palabra selecionada, pero en mayúsculas.
 
 
-def ahorcado():
+def ahorcado(): # Se crea una nueva función, llamada "ahorcado"
 
-    print("=======================================")
-    print(" ¡Bienvenido(a) al juego del Ahorcado! ")
-    print("=======================================")
+    print("=======================================") # Instrucción que imprimirá en consola la cadena: =======================================
+    print(" ¡Bienvenido(a) al juego del Ahorcado! ") # Instrucción que imprimirá en consola la cadena: ¡Bienvenido(a) al juego del Ahorcado!
+    print("=======================================") # Instrucción que imprimirá en consola la cadena: =======================================
 
-    palabra = obtener_palabra_válida(palabras)
+    palabra = obtener_palabra_válida(palabras) # variable que almacena la cadena/palabra seleccionada anteriormente desde la función "obtener_palabra_válida"
     letras_por_adivinar = set(palabra)  
     abecedario = set(string.ascii_uppercase) 
     letras_adivinadas = set()  
 
-    vidas = 7
+    vidas = 7 # Variable nombrada "vidas" de tipo numerica, la cual indicará el número de oportunidades a jugar.
 
 
     while len(letras_por_adivinar) > 0 and vidas > 0:
