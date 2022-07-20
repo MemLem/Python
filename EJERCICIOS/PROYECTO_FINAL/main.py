@@ -8,14 +8,14 @@ from palabras import palabras # Instrucción para llamar el modulo nombrado como
 from ahorcado_diagramas import vidas_diccionario_visual # Instrucción para llamar el modulo nombrado como "ahorcado_diagramas.py", el cual es a su vez está importando especificamente el diccionario llamado "vidas_diccionario_visual".
 
 
-def obtener_palabra_válida(palabras):
-    palabra = random.choice(palabras) 
+def obtener_palabra_válida(palabras): # Creación de la función llamada "obtener_palabra_válida", la cual contiene el argumento "palabras"
+    palabra = random.choice(palabras) # El argumento "palabra" almacena un elemento seleccionado aleatoriamente desde la lista "palabras" (la cual fue importada con anterioridad). El método .choice() es parte del modulo "random", el cual también fue importado lineas arriba.
 
 
-    while '-' in palabra or ' ' in palabra:
-        palabra = random.choice(palabras)
+    while '-' in palabra or ' ' in palabra: 
+        palabra = random.choice(palabras) # En caso de cumplir las condiciones del while anterior, esta variable almacenará un elemento seleccionado aleatoriamente desde la lista "palabras" (la cual fue importada con anterioridad)
 
-    return palabra.upper()
+    return palabra.upper() # Instrucción que devuelve la palabra selecionada, pero en mayúsculas.
 
 
 def ahorcado():
