@@ -32,19 +32,19 @@ def ahorcado(): # Se crea una nueva función, llamada "ahorcado"
     vidas = 7 # Variable nombrada "vidas" de tipo numerica y que funcionará como contador, la cual, a su vez, indicará el número de oportunidades a jugar.
 
 
-    while len(letras_por_adivinar) > 0 and vidas > 0: # ciclo que se repetira n veces, siempre y cuando la longitud de la palabra seleccionada sea mayor que 0 elementos Y vidas sea mayor a cero, es decir, cuando el jugador tenga cero letras por adivinar y cero vidas se detendra el programa.
+    while len(letras_por_adivinar) > 0 and vidas > 0: # ciclo que se repetira n veces, siempre y cuando la longitud del conjunto "letras_por_adivinar" sea mayor que 0 YY vidas sea mayor a cero, es decir, cuando el jugador aún no haya adivinado las letras que contenga la "palabra" a adivinar y cuando tenga vidas; en caso contrario, se detendra el programa.
 
         print(f"Te quedan {vidas} vidas y has usado estas letras: {' '.join(letras_adivinadas)}") # Instrucción que imprimirá en consola el mensaje que le indicará cuántas vidas le quedan y el conjutno de letras adivinadas, pero separadas unicamemte por in espacio en blanco.
 
       
-        palabra_lista = [letra if letra in letras_adivinadas else '-' for letra in palabra]
-        print(vidas_diccionario_visual[vidas]) 
-        print(f"Palabra: {' '.join(palabra_lista)}") 
+        palabra_lista = [letra if letra in letras_adivinadas else '-' for letra in palabra] # Instrucción para crear una nueva variable llamada "palabra_lista", la cual contendra as su vez una lista que estará conformada por cada letra adivinada o por guiones (-), cantidad de guiones que será detemrinada por un ciclo que se iterará por cada letra/elemento que contenga la "palabra" seleccinada
+        print(vidas_diccionario_visual[vidas]) # Instrucción que imprimirá en consola el "dibujo" que corresponda al valor "vida" desde el diccionario importado con anterioridad "vidas_diccionario_visual".
+        print(f"Palabra: {' '.join(palabra_lista)}")  # Instrucción que imprimirá en consola cada uno de los elementos de la "palabra" seleccionada, pero ahora separadas por un espacio en blanco (forma horizontal).
 
      
         letra_usuario = input('Escoge una letra: ').upper()  # Instrucción que le solicitará por consola al usuario ingresar una letra. La cual la almacenará, a su vez, en la variable "letra_usuario", pero en mayuscula.
 
-        if letra_usuario in abecedario - letras_adivinadas: # Condicional que indica que si la letra ingresada por el usuario es validada o se encuentra en el conjunto "abecedario" (pero sin considerara las letras ya ingresadas con anterioridad y adivinadas), debera hacer lo siguiente:
+        if letra_usuario in abecedario - letras_adivinadas: # Condicional que indica que si la letra ingresada por el usuario es validada o se encuentra en el conjunto "abecedario" (pero sin considerar las letras ya ingresadas con anterioridad y adivinadas), debera hacer lo siguiente:
             letras_adivinadas.add(letra_usuario) # Intrucción que indica agregar la letra ingresada por el usuario a la variable "letras adivinadas"
        
             if letra_usuario in letras_por_adivinar: # Condicional que indica que si la letra ingresada por el usuario se encuentra en el conjunto "letras_por_adivinar", es decir, en las letras únicas que contiene la palabra seleccionada, debera hacer lo siguiente:
