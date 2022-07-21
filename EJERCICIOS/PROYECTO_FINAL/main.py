@@ -52,7 +52,7 @@ def ahorcado(): # Se crea una nueva función, llamada "ahorcado"
                 print('')
          
             else: # en caso de que la letra ingresada por el usuario no sea la correcta, el programa deberá hacer:
-                vidas = vidas - 1 # instrucción para restar una unidad al contenido de la variable "vida" segun su valor que contenga en cada validación.
+                vidas = vidas - 1 # instrucción para restar una unidad al contenido de la variable "vida" segun su valor que contenga en cada validación. Esta instrucción servirá para determinar el número de veces que se repetira wl ciclo while.
                 print(f"\nTu letra, {letra_usuario} no está en la palabra.") # Instrucción que imprimirá en consola el mensaje que indica que la letra ingresda por el usuario no pertenece a la palabra a adivinar.
         
         elif letra_usuario in letras_adivinadas: # condicional que indica que si la letra ingresada por el usuario ya había sido ingresada con anteriordad y que se encuentra dentro del conjutno de letras ya adivinadas y almacendas en tal conjunto, el programa deberá hacer:
