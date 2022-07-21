@@ -42,26 +42,26 @@ def ahorcado(): # Se crea una nueva función, llamada "ahorcado"
         print(f"Palabra: {' '.join(palabra_lista)}") 
 
      
-        letra_usuario = input('Escoge una letra: ').upper()  # Instrucción que le solicitará por consola al usuario ingresar una letra, la cual la almacenará, a su vez, en la variable "letra_usuario", pero en mayuscula.
+        letra_usuario = input('Escoge una letra: ').upper()  # Instrucción que le solicitará por consola al usuario ingresar una letra. La cual la almacenará, a su vez, en la variable "letra_usuario", pero en mayuscula.
 
-        if letra_usuario in abecedario - letras_adivinadas:
-            letras_adivinadas.add(letra_usuario)
+        if letra_usuario in abecedario - letras_adivinadas: # Condicional que indica que si la letra ingresada por el usuario es validada o se encuentra en el conjunto "abecedario" (pero sin considerara las letras ya ingresadas con anterioridad y adivinadas), debera hacer lo siguiente:
+            letras_adivinadas.add(letra_usuario) # Intrucción que indica agregar la letra ingresada por el usuario a la variable "letras adivinadas"
        
-            if letra_usuario in letras_por_adivinar:
-                letras_por_adivinar.remove(letra_usuario)
+            if letra_usuario in letras_por_adivinar: # Condicional que indica que si la letra ingresada por el usuario se encuentra en el conjunto "letras_por_adivinar", es decir, en las letras únicas que contiene la palabra seleccionada, debera hacer lo siguiente:
+                letras_por_adivinar.remove(letra_usuario) # Instruccción que indica remover la letra ingresada por el usuario del conjunto "letras_por_adivinar", es decir, en caso de que haya adivinado una letra correcta, ésta se eliminará del conjunto de letras que contiene la "palabra" para así quedar unicamente las letras que quedan por adivinar.
                 print('')
          
-            else:
-                vidas = vidas - 1
-                print(f"\nTu letra, {letra_usuario} no está en la palabra.")
+            else: # en caso de que la letra ingresada por el usuario no sea la correcta, el programa deberá hacer:
+                vidas = vidas - 1 # instrucción para restar una unidad al contenido de la variable "vida" segun su valor que contenga en cada validación.
+                print(f"\nTu letra, {letra_usuario} no está en la palabra.") # Instrucción que imprimirá en consola el mensaje que indica que la letra ingresda por el usuario no pertenece a la palabra a adivinar.
         
-        elif letra_usuario in letras_adivinadas:
-            print("\nYa escogiste esa letra. Por favor escoge una letra nueva.")
-        else:
-            print("\nEsta letra no es válida.")
+        elif letra_usuario in letras_adivinadas: # condicional que indica que si la letra ingresada por el usuario ya había sido ingresada con anteriordad y que se encuentra dentro del conjutno de letras ya adivinadas y almacendas en tal conjunto, el programa deberá hacer:
+            print("\nYa escogiste esa letra. Por favor escoge una letra nueva.") # Imprimir en consola la instrucción de ingresar otra letra no elegida con anterioridad.
+        else: # en caso que no se cumpla la condición, es decir, que la letra ingresada no haya sido ingresada con anterioridad ni adivinada, debera hacer:
+            print("\nEsta letra no es válida.") # mostrar el mensaje en consola que la letra ingresada no es correcta.
 
    
-    if vidas == 0: # Condicional que iniciará en caso de que el contador vida sea igual a cero , es decir, que el jugador ya no tenga más intentos d eingresas una nueva letra.
+    if vidas == 0: # Condicional que iniciará en caso de que el contador "vida" sea igual a cero , es decir, que el jugador ya no tenga más intentos d eingresas una nueva letra.
         print(vidas_diccionario_visual[vidas]) # Instrucción que imprimirá en consola el "dibujo" que corresponda al valor 0 desde el diccionario importado anteriormente, llamado "vidas_diccionario_visual".
         print(f"¡Ahorcado! Perdiste. Lo lamento mucho. La palabra era: {palabra}") # Instrucción que imprimirá en consola el mensaje de que ha terminado el juego, ha perdido el jugador e indicará cual era la pabra correcta y seleecionada desde el inicio del juego.
     else: # en caso de que el jugador todavía tenga vidas/intentos por adivinar una letra, se iniciará la siguiente instrucción:
